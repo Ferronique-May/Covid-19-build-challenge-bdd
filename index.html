@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Covid-19 Stats</title>
+    <!-- Import TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+  <!-- Import tfjs-vis -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+  <!-- Import the main script file -->
+  <script src="index.js"></script>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#" class="active">COVID-19 </a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <section class="intro">
+            <h1>
+                 Update & Predictions 
+            </h1>
+            <h2 id="currentCountry"></h2>
+        </section>
+        
+        <section class="liveStats">
+            <h3>The Table below is showing live data.</h3>
+            <span class="postmanLink">
+                <strong>NB:</strong> Data is being taken from: <a href="https://api.covid19api.com/total/country/south-africa">"https://api.covid19api.com/total/country/south-africa"</a>.
+                 It is well documented here <a href="https://documenter.getpostman.com/view/10808728/SzS8rjbc">: Postman COVID-19</a> 
+            </span>
+            <table>
+                <tbody>
+                    <tr id="heading">
+                        <td class="heading cell">Country</td>
+                        <td class="heading cell">Last recorded on:</td>
+                        <td class="heading cell">Confirmed Cases</td>
+                        <td class="heading cell">Active Cases</td>
+                        <td class="heading cell">Recovered</td>
+                        <td class="heading cell">Deaths</td>
+                    </tr>
+                    <tr>
+                        <td class="country cell"></td>
+                        <td id="date" class="cell"></td>
+                        <td id="confirmed" class="cell"></td>
+                        <td id="active" class="cell"></td>
+                        <td id="recovered" class="cell"></td>
+                        <td id="deaths" class="cell"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="predictions">
+            <h3>The table below shows one possible outcome based on current trends in the data</h3>
+            <span><strong>Please Note:</strong> The predictions made below are in no way accurate and is just an assumption based on current trends in the data.</span>
+            <table>
+                <tbody>
+                    <tr id="heading">
+                        <td class="heading cell">Country</td>
+                        <td class="heading cell">Possible Outcome for:</td>
+                        <td class="heading cell">Confirmed Cases</td>
+                        <td class="heading cell">Active Cases</td>
+                        <td class="heading cell">Recovered</td>
+                        <td class="heading cell">Deaths</td>
+                    </tr>
+                    <tr>
+                        <td class="country cell"></td>
+                        <td id="datePred" class="cell"></td>
+                        <td id="confirmedPred" class="cell"></td>
+                        <td id="activePred" class="cell"></td>
+                        <td id="recoveredPred" class="cell"></td>
+                        <td id="deathsPred" class="cell"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </article>
+
+    
+</body>
+<script src="index.js"></script>
+</html>
